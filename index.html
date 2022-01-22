@@ -30,7 +30,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -620,6 +622,51 @@
                     
 
                     
+                        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="music-player">
+    
+        <div class="title center-align">
+            <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+        </div>
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="3163736017"
+                   fixed='false'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+                        
 
                     
 
@@ -646,7 +693,48 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/01/21/React%E7%AC%AC%E4%BA%94%E5%A4%A9%E6%95%B4%E7%90%86119/">
+                    <a href="/2022/01/21/Craco%20configuration%20of%20Webpack/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hello React day1">
+                            
+                            <span class="card-title">Hello React day1</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                🌟 使用craco进行webpack的相关配置 yarn add  @craco/craco
+//或者
+ npm install  @craco/craco --save
+
+🐖  在项目根目录新建craco.config.js文件cra
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                洪大俊
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/01/21/React%20Day%20five%20Tidying%20up/">
                         <div class="card-image">
                             
                             
@@ -686,7 +774,7 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/01/21/React%E7%AC%AC%E5%9B%9B%E5%A4%A9%E6%95%B4%E7%90%86117/">
+                    <a href="/2022/01/21/React%20Day%20four%20Tidying%20up/">
                         <div class="card-image">
                             
                             
@@ -726,7 +814,7 @@ import  ‘./index.css’  ==&gt; import  xxx  from ‘./in
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/01/21/React%E7%AC%AC%E4%B8%89%E5%A4%A9%E6%95%B4%E7%90%86116/">
+                    <a href="/2022/01/21/React%20Day%20three%20Tidying%20up/">
                         <div class="card-image">
                             
                             
@@ -769,7 +857,7 @@ render()
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/01/21/React%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%95%B4%E7%90%86114/">
+                    <a href="/2022/01/21/React%20Day%20two%20Tidying%20up/">
                         <div class="card-image">
                             
                             
@@ -786,8 +874,8 @@ render()
 Day two1.组件实例的三大核心属性 1：State
  state（做状态管理的）
 
- class Weather extends React.Component &amp;#123;
-          
+ class Weather extends React.Component {
+            constru
                             
                         </div>
                         <div class="publish-info">
@@ -815,9 +903,9 @@ Day two1.组件实例的三大核心属性 1：State
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hello React day1">
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Hello React day1 summary">
                             
-                            <span class="card-title">Hello React day1</span>
+                            <span class="card-title">Hello React day1 summary</span>
                         </div>
                     </a>
 
@@ -894,47 +982,6 @@ Day onePubSubJs(消息的发布与订阅)安装： npm install pubsub-js
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
     
 
     <div class="container row center-align"
