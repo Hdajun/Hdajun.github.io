@@ -1,0 +1,1336 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="craco部分配置, H_dajun">
+    <meta name="description" content="🌟 使用craco进行webpack的相关配置 yarn add  @craco/craco
+//或者
+ npm install  @craco/craco --save
+
+🐖  在项目根目录新建craco.config.js文件cra">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>craco部分配置 | H_dajun</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <span class="logo-span">H_dajun</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <div class="logo-name">H_dajun</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">craco部分配置</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/craco/">
+                                <span class="chip bg-color">craco</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/craco/" class="post-category">
+                                craco
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-01-24
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    623
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="star2-使用craco进行webpack的相关配置"><a href="#star2-使用craco进行webpack的相关配置" class="headerlink" title=":star2: 使用craco进行webpack的相关配置"></a><span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 使用craco进行webpack的相关配置</h2><pre class=" language-dart"><code class="language-dart"> yarn add  <span class="token metadata symbol">@craco</span><span class="token operator">/</span>craco
+<span class="token comment" spellcheck="true">//或者</span>
+ npm install  <span class="token metadata symbol">@craco</span><span class="token operator">/</span>craco <span class="token operator">--</span>save
+</code></pre>
+<h2 id="pig2-在项目根目录新建craco-config-js文件"><a href="#pig2-在项目根目录新建craco-config-js文件" class="headerlink" title=":pig2:  在项目根目录新建craco.config.js文件"></a><span class="github-emoji"><span>🐖</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f416.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  在项目根目录新建craco.config.js文件</h2><p>craco.config.js文件中进行相关配置</p>
+<h2 id="smile-cat-修改package-json"><a href="#smile-cat-修改package-json" class="headerlink" title=":smile_cat: 修改package.json"></a><span class="github-emoji"><span>😸</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 修改package.json</h2><img src="https:////upload-images.jianshu.io/upload_images/15884256-f98082422a319e9d.png?imageMogr2/auto-orient/strip|imageView2/2/w/660/format/webp" alt="img" style="zoom:50%;">
+
+<p>image.png</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token string">"scripts"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"start"</span><span class="token keyword">:</span> <span class="token string">"craco start"</span>,
+    <span class="token string">"build"</span><span class="token keyword">:</span> <span class="token string">"craco build"</span>,
+    <span class="token string">"test"</span><span class="token keyword">:</span> <span class="token string">"craco test"</span>,
+    <span class="token string">"eject"</span><span class="token keyword">:</span> <span class="token string">"react-scripts eject"</span>
+  <span class="token punctuation">}</span>,
+</code></pre>
+<h2 id="wilted-flower-配置文件craco-config-js"><a href="#wilted-flower-配置文件craco-config-js" class="headerlink" title=":wilted_flower: 配置文件craco.config.js"></a><span class="github-emoji"><span>🥀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f940.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 配置文件craco.config.js</h2><pre class=" language-cpp"><code class="language-cpp">npm install compression<span class="token operator">-</span>webpack<span class="token operator">-</span>plugin <span class="token operator">--</span>save <span class="token comment" spellcheck="true">//打包build生成gizp压缩文件</span>
+npm install webpack<span class="token operator">-</span>bundle<span class="token operator">-</span>analyzer <span class="token operator">--</span>save <span class="token comment" spellcheck="true">//分析打包后的文件体积</span>
+</code></pre>
+<h3 id="tiger-打包配置压缩文件"><a href="#tiger-打包配置压缩文件" class="headerlink" title=":tiger: 打包配置压缩文件"></a><span class="github-emoji"><span>🐯</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f42f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 打包配置压缩文件</h3><p>npm install compression-webpack-plugin –save //打包build生成gizp压缩文件</p>
+<pre class=" language-tsx"><code class="language-tsx">const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const webpack = require('webpack')
+module.exports = {
+    webpack: {
+        plugins: [
+            // 打压缩包
+            new CompressionWebpackPlugin({
+                algorithm: 'gzip',
+                test: new RegExp(
+                    '\\.(' +
+                    ['js', 'css'].join('|') +
+                    ')$'
+                ),
+                threshold: 1024,
+                minRatio: 0.8
+            }),
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    ]
+};
+</code></pre>
+<p>⚠️compression-webpack-plugin 打包的文件生成 .gz后缀的文件需要服务器配置支持。</p>
+<h3 id="watermelon-打包忽略console-debugger"><a href="#watermelon-打包忽略console-debugger" class="headerlink" title=":watermelon: 打包忽略console,debugger"></a><span class="github-emoji"><span>🍉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f349.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 打包忽略console,debugger</h3><p>npm install uglifyjs-webpack-plugin@1 –save-dev<br> （⚠️ 必须为1.0版本，否则打包报错）</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">const</span> UglifyJsPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uglifyjs-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    webpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+             <span class="token keyword">new</span> <span class="token class-name">UglifyJsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                uglifyOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    compress<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        warnings<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                        drop_debugger<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        drop_console<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                sourceMap<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                parallel<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="feet-antd的按需引入和自定义主题"><a href="#feet-antd的按需引入和自定义主题" class="headerlink" title=":feet: antd的按需引入和自定义主题"></a><span class="github-emoji"><span>🐾</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f43e.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> antd的按需引入和自定义主题</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//yarn add @babel/plugin-proposal-decorators --save -dev</span>
+<span class="token comment" spellcheck="true">//yarn add craco-less</span>
+
+<span class="token keyword">const</span> CracoLessPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'craco-less'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//样式的按需引入</span>
+    babel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span><span class="token string">'import'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> libraryName<span class="token punctuation">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span> libraryDirectory<span class="token punctuation">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'@babel/plugin-proposal-decorators'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> legacy<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">//配置自定义主题</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            plugin<span class="token punctuation">:</span> CracoLessPlugin<span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                lessLoaderOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    lessOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        modifyVars<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">'@primary-color'</span><span class="token punctuation">:</span> <span class="token string">'#1DA57A'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        javascriptEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="desktop-computer-配置别名"><a href="#desktop-computer-配置别名" class="headerlink" title=":desktop_computer: 配置别名"></a><span class="github-emoji"><span>🖥</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f5a5.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 配置别名</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//在craco.config,.js里加上</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  webpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 别名</span>
+    alias<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"@"</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">"@utils"</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"src/utils"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<h3 id="phone-配置代理"><a href="#phone-配置代理" class="headerlink" title=":phone: 配置代理"></a><span class="github-emoji"><span>☎</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/260e.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 配置代理</h3><pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    devServer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        proxy<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">'/api'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                target<span class="token punctuation">:</span> <span class="token string">'http://localhost:8000'</span><span class="token punctuation">,</span>
+                changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                pathRewrite<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">"^/api"</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// tailwindcss 的相关配置，如果没有使用到可以去掉</span>
+    style<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        postcss<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'tailwindcss'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="maple-leaf-查看打包分析明细"><a href="#maple-leaf-查看打包分析明细" class="headerlink" title=":maple_leaf: 查看打包分析明细"></a><span class="github-emoji"><span>🍁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f341.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 查看打包分析明细</h3><p><strong>npm i webpack-bundle-analyzer –save -dev</strong></p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">const</span> <span class="token punctuation">{</span> BundleAnalyzerPlugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"webpack-bundle-analyzer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    webpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment" spellcheck="true">//打包分析</span>
+            <span class="token keyword">new</span> <span class="token class-name">BundleAnalyzerPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>⚠️：生产版本关闭此项</p>
+<h3 id="houses-查看打包的进度"><a href="#houses-查看打包的进度" class="headerlink" title=":houses: 查看打包的进度"></a><span class="github-emoji"><span>🏘</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3d8.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 查看打包的进度</h3><p>npm install simple-progress-webpack-plugin –save -dev</p>
+<pre class=" language-jsx"><code class="language-jsx"><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> SimpleProgressWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">'simple-progress-webpack-plugin'</span> <span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    webpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token keyword">new</span> <span class="token class-name">SimpleProgressWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    
+    babel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span><span class="token string">'import'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> libraryName<span class="token punctuation">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span> libraryDirectory<span class="token punctuation">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token string">'css'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'@babel/plugin-proposal-decorators'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> legacy<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            plugin<span class="token punctuation">:</span> <span class="token function">CracoVtkPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="happy-完整配置"><a href="#happy-完整配置" class="headerlink" title=":happy: 完整配置"></a>:happy: 完整配置</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> CracoVtkPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"craco-vtk"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");</span>
+<span class="token keyword">const</span> CompressionWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'compression-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> UglifyJsPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uglifyjs-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> SimpleProgressWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">'simple-progress-webpack-plugin'</span> <span class="token punctuation">)</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    webpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 别名</span>
+        alias<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"@"</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment" spellcheck="true">//打包分析</span>
+            <span class="token comment" spellcheck="true">// new BundleAnalyzerPlugin(),</span>
+            <span class="token comment" spellcheck="true">// 打压缩包</span>
+            <span class="token keyword">new</span> <span class="token class-name">CompressionWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                algorithm<span class="token punctuation">:</span> <span class="token string">'gzip'</span><span class="token punctuation">,</span>
+                test<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>
+                    <span class="token string">'\\.('</span> <span class="token operator">+</span>
+                    <span class="token punctuation">[</span><span class="token string">'js'</span><span class="token punctuation">,</span> <span class="token string">'css'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'|'</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+                    <span class="token string">')$'</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                threshold<span class="token punctuation">:</span> <span class="token number">1024</span><span class="token punctuation">,</span>
+                minRatio<span class="token punctuation">:</span> <span class="token number">0.8</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token comment" spellcheck="true">//</span>
+            <span class="token keyword">new</span> <span class="token class-name">UglifyJsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                uglifyOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    compress<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        warnings<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                        drop_debugger<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        drop_console<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                sourceMap<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                parallel<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+            <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span><span class="token regex">/^\.\/locale$/</span><span class="token punctuation">,</span> <span class="token regex">/moment$/</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token keyword">new</span> <span class="token class-name">SimpleProgressWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//抽离公用模块</span>
+        optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            splitChunks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                cacheGroups<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    commons<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        chunks<span class="token punctuation">:</span> <span class="token string">'initial'</span><span class="token punctuation">,</span>
+                        minChunks<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> maxInitialRequests<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+                        minSize<span class="token punctuation">:</span> <span class="token number">0</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    vendor<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        test<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+                        chunks<span class="token punctuation">:</span> <span class="token string">'initial'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'vendor'</span><span class="token punctuation">,</span>
+                        priority<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                        enforce<span class="token punctuation">:</span> <span class="token boolean">true</span>
+
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    babel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span><span class="token string">'import'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> libraryName<span class="token punctuation">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span> libraryDirectory<span class="token punctuation">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token string">'css'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'@babel/plugin-proposal-decorators'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> legacy<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            plugin<span class="token punctuation">:</span> <span class="token function">CracoVtkPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">洪大俊</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hdajun.github.io/2022/01/24/craco-configuration-of-webpack/">https://hdajun.github.io/2022/01/24/craco-configuration-of-webpack/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">洪大俊</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/craco/">
+                                    <span class="chip bg-color">craco</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '06628549678e23fbbda1',
+        clientSecret: '3b4547ac151512ff09470b92b1714fd0dbd316dc',
+        repo: 'Hdajun.github.io',
+        owner: 'Hdajun',
+        admin: "Hdajun",
+        id: '2022-01-24T22-39-52',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/01/24/hello-react/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/27.png" class="responsive-img" alt="Hello React day1">
+                        
+                        <span class="card-title">Hello React day1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/react/" class="post-category">
+                                    react
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/React/">
+                        <span class="chip bg-color">React</span>
+                    </a>
+                    
+                    <a href="/tags/learning/">
+                        <span class="chip bg-color">learning</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/01/24/craco-configuration-of-webpack/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.png" class="responsive-img" alt="craco部分配置">
+                        
+                        <span class="card-title">craco部分配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/craco/" class="post-category">
+                                    craco
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/craco/">
+                        <span class="chip bg-color">craco</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <a href="/about" target="_blank">洪大俊</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">8.5k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "1";
+                        var startDate = "29";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:1624058545@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我: 1624058545@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1624058545" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1624058545" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://weixin.qq.com/" class="tooltipped" target="_blank" data-tooltip="微信联系我：lyym-aini-bb" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <!-- 引入鼠标移动效果的js文件 -->
+    <script src="/js/cursor.js"></script>
+
+    <!-- 点击烟花爆炸效果 -->
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":165,"height":335},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+
+</html>
