@@ -4,14 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello React day3, H_dajun">
-    <meta name="description" content="学习React基础的第三天 
-Day three1.老版本生命周期1.初始化阶段：由ReactDOM.render(组件，node)触发—-初次渲染
-
-constructor()
-componentWillMount()
-render()
-">
+    <meta name="keywords" content="Hexo博客部署腾讯云过程全记录, H_dajun">
+    <meta name="description" content="Hexo博客部署腾讯云过程全记录简介​    首先因为部署在github上访问太慢，其次已经租了云服务器不能浪费呀🎃
+部署环境服务器配置安装依赖包yum install curl-devel expat-devel gettext-dev">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +18,7 @@ render()
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello React day3 | H_dajun</title>
+    <title>Hexo博客部署腾讯云过程全记录 | H_dajun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -230,12 +225,12 @@ render()
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello React day3</h1>
+                    <h1 class="description center-align post-title">Hexo博客部署腾讯云过程全记录</h1>
                 </div>
             </div>
         </div>
@@ -351,12 +346,12 @@ render()
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/React/">
-                                <span class="chip bg-color">React</span>
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
-                            <a href="/tags/learning/">
-                                <span class="chip bg-color">learning</span>
+                            <a href="/tags/centos/">
+                                <span class="chip bg-color">centos</span>
                             </a>
                         
                     </div>
@@ -367,8 +362,8 @@ render()
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/react/" class="post-category">
-                                react
+                            <a href="/categories/common/" class="post-category">
+                                common
                             </a>
                         
                     </div>
@@ -380,7 +375,7 @@ render()
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-24
+                    2023-03-06
                 </div>
                 
 
@@ -389,14 +384,14 @@ render()
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    702
+                    959
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -416,84 +411,115 @@ render()
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>学习React基础的第三天 </p>
-<h2 id="Day-three"><a href="#Day-three" class="headerlink" title="Day three"></a>Day three</h2><h3 id="1-老版本生命周期"><a href="#1-老版本生命周期" class="headerlink" title="1.老版本生命周期"></a>1.老版本生命周期</h3><p>1.初始化阶段：由ReactDOM.render(组件，node)触发—-初次渲染</p>
+                <h1 id="Hexo博客部署腾讯云过程全记录"><a href="#Hexo博客部署腾讯云过程全记录" class="headerlink" title="Hexo博客部署腾讯云过程全记录"></a>Hexo博客部署腾讯云过程全记录</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>​    首先因为部署在github上访问太慢，其次已经租了云服务器不能浪费呀<span class="github-emoji"><span>🎃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f383.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<h3 id="部署环境"><a href="#部署环境" class="headerlink" title="部署环境"></a>部署环境</h3><h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h4><pre class=" language-php"><code class="language-php">yum install curl<span class="token operator">-</span>devel expat<span class="token operator">-</span>devel gettext<span class="token operator">-</span>devel openssl<span class="token operator">-</span>devel zlib<span class="token operator">-</span>devel
+yum install  gcc perl<span class="token operator">-</span>ExtUtils<span class="token operator">-</span>MakeMaker
+</code></pre>
+<h4 id="看一下有没有git，没有（或者版本太低）就下载"><a href="#看一下有没有git，没有（或者版本太低）就下载" class="headerlink" title="看一下有没有git，没有（或者版本太低）就下载"></a>看一下有没有git，没有（或者版本太低）就下载</h4><pre class=" language-php"><code class="language-php">git <span class="token operator">-</span>v <span class="token comment" spellcheck="true">// 没有就下载</span>
+
+cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>src   <span class="token comment" spellcheck="true">// 选择文件保存位置</span>
+wget https<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//mirrors.edge.kernel.org/pub/software/scm/git/git-2.18.4.tar.gz   // 下载链接</span>
+tar <span class="token operator">-</span>zxvf git<span class="token number">-2.18</span><span class="token punctuation">.</span><span class="token number">4</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz    <span class="token comment" spellcheck="true">// 解压</span>
+</code></pre>
+<h4 id="编译并安装"><a href="#编译并安装" class="headerlink" title="编译并安装"></a>编译并安装</h4><pre class=" language-php"><code class="language-php">cd git<span class="token number">-2.19</span><span class="token punctuation">.</span><span class="token number">0</span>                   <span class="token comment" spellcheck="true">// 进入文件夹</span>
+make prefix<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>git all  <span class="token comment" spellcheck="true">// 编译源码</span>
+make prefix<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>git install  <span class="token comment" spellcheck="true">// 安装至 /usr/local/git 路径</span>
+</code></pre>
+<h4 id="编辑环境配置文件"><a href="#编辑环境配置文件" class="headerlink" title="编辑环境配置文件"></a>编辑环境配置文件</h4><pre class=" language-php"><code class="language-php">vim <span class="token operator">/</span>etc<span class="token operator">/</span>profile
+</code></pre>
+<h4 id="在文件末尾添加如下内容"><a href="#在文件末尾添加如下内容" class="headerlink" title="在文件末尾添加如下内容"></a>在文件末尾添加如下内容</h4><pre class=" language-php"><code class="language-php"><span class="token constant">PATH</span><span class="token operator">=</span><span class="token variable">$PATH</span><span class="token punctuation">:</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>git<span class="token operator">/</span>bin   <span class="token comment" spellcheck="true">// git 的目录</span>
+export <span class="token constant">PATH</span>
+</code></pre>
+<h4 id="刷新环境变量"><a href="#刷新环境变量" class="headerlink" title="刷新环境变量"></a>刷新环境变量</h4><pre class=" language-php"><code class="language-php">source <span class="token operator">/</span>etc<span class="token operator">/</span>profile
+</code></pre>
+<h4 id="创建git用户并修改权限"><a href="#创建git用户并修改权限" class="headerlink" title="创建git用户并修改权限"></a>创建git用户并修改权限</h4><pre class=" language-php"><code class="language-php">adduser git
+passwd git
+chmod <span class="token number">740</span> <span class="token operator">/</span>etc<span class="token operator">/</span>sudoers
+vim <span class="token operator">/</span>etc<span class="token operator">/</span>sudoers
+</code></pre>
+<h4 id="找到以下内容（输入i进入编辑模式）"><a href="#找到以下内容（输入i进入编辑模式）" class="headerlink" title="找到以下内容（输入i进入编辑模式）"></a>找到以下内容（输入i进入编辑模式）</h4><pre class=" language-php"><code class="language-php"><span class="token shell-comment comment">## Allow root to run any commands anywhere</span>
+root    <span class="token constant">ALL</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token constant">ALL</span><span class="token punctuation">)</span>       <span class="token constant">ALL</span>
+</code></pre>
+<h4 id="在该语句下添加"><a href="#在该语句下添加" class="headerlink" title="在该语句下添加"></a>在该语句下添加</h4><pre class=" language-php"><code class="language-php">git <span class="token constant">ALL</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token constant">ALL</span><span class="token punctuation">)</span> <span class="token constant">ALL</span>
+</code></pre>
+<h4 id="退出（esc-wq）并修改权限"><a href="#退出（esc-wq）并修改权限" class="headerlink" title="退出（esc + :wq）并修改权限"></a>退出（esc + :wq）并修改权限</h4><pre class=" language-php"><code class="language-php">source <span class="token operator">/</span>etc<span class="token operator">/</span>profile
+</code></pre>
+<h4 id="本地使用gitbash创建密钥"><a href="#本地使用gitbash创建密钥" class="headerlink" title="本地使用gitbash创建密钥"></a>本地使用gitbash创建密钥</h4><pre class=" language-php"><code class="language-php">ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token comment" spellcheck="true">//本地有可以直接查找本地的文件直接使用</span>
+</code></pre>
+<h4 id="在腾讯云中创建ssh"><a href="#在腾讯云中创建ssh" class="headerlink" title="在腾讯云中创建ssh"></a>在腾讯云中创建ssh</h4><pre class=" language-php"><code class="language-php"><span class="token comment" spellcheck="true">// 将本地的id_rsa.pub中的文件内容全部复制到authorized_keys中</span>
+
+su git
+mkdir <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
+vim <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>authorized_keys
+</code></pre>
+<h4 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h4><pre class=" language-php"><code class="language-php">cd <span class="token operator">~</span>
+chmod <span class="token number">600</span> <span class="token punctuation">.</span>ssh<span class="token operator">/</span>authorized_keys
+chmod <span class="token number">700</span> <span class="token punctuation">.</span>ssh
+</code></pre>
+<h4 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h4><pre class=" language-php"><code class="language-php">ssh <span class="token operator">-</span>v git@<span class="token constant">SERVER</span> <span class="token comment" spellcheck="true">//@后是你自己的服务器公网IP，如果不出现failed字样，说明成功</span>
+</code></pre>
+<h4 id="云服务器中创建网站目录并设置权限"><a href="#云服务器中创建网站目录并设置权限" class="headerlink" title="云服务器中创建网站目录并设置权限"></a>云服务器中创建网站目录并设置权限</h4><pre class=" language-php"><code class="language-php">su root
+mkdir <span class="token operator">/</span>home<span class="token operator">/</span>hexo
+chown git<span class="token punctuation">:</span>git <span class="token operator">-</span>R <span class="token operator">/</span>home<span class="token operator">/</span>hexo
+</code></pre>
+<h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><pre class=" language-php"><code class="language-php">yum install <span class="token operator">-</span>y nginx    <span class="token comment" spellcheck="true">// 安装</span>
+systemctl start nginx<span class="token punctuation">.</span>service     <span class="token comment" spellcheck="true">// 启动服务</span>
+<span class="token comment" spellcheck="true">// 以上执行完之后，在浏览器中输入你的公网IP如果可以进入CentOs界面，说明Nginx安装成功</span>
+</code></pre>
+<h4 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h4><pre class=" language-php"><code class="language-php">nginx <span class="token operator">-</span>t  <span class="token comment" spellcheck="true">// 命令查看位置，一般为 /etc/nginx/nginx.conf。</span>
+vim <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>nginx<span class="token punctuation">.</span>conf <span class="token comment" spellcheck="true">//修改配置文件，在server_name后添加自己的域名（要备案），root后添加/home/hexo</span>
+</code></pre>
+<p>这里的备案如果是腾讯云服务器的域名可以直接访问<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/beian/manage">备案</a>里面有详细的步骤，我的一周就完成了</p>
+<h4 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h4><pre class=" language-php"><code class="language-php">systemctl restart nginx<span class="token punctuation">.</span>service
+</code></pre>
+<h4 id="建立git仓库并修改权限"><a href="#建立git仓库并修改权限" class="headerlink" title="建立git仓库并修改权限"></a>建立git仓库并修改权限</h4><pre class=" language-php"><code class="language-php">su root
+cd <span class="token operator">/</span>home<span class="token operator">/</span>git
+git init <span class="token operator">--</span>bare blog<span class="token punctuation">.</span>git
+chown git<span class="token punctuation">:</span>git <span class="token operator">-</span>R blog<span class="token punctuation">.</span>git
+</code></pre>
+<h4 id="同步网站根目录"><a href="#同步网站根目录" class="headerlink" title="同步网站根目录"></a>同步网站根目录</h4><pre class=" language-php"><code class="language-php">vim blog<span class="token punctuation">.</span>git<span class="token operator">/</span>hooks<span class="token operator">/</span>post<span class="token operator">-</span>receive
+</code></pre>
+<h4 id="修改权限-1"><a href="#修改权限-1" class="headerlink" title="修改权限"></a>修改权限</h4><pre class=" language-php"><code class="language-php">chmod <span class="token operator">+</span>x <span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token operator">/</span>blog<span class="token punctuation">.</span>git<span class="token operator">/</span>hooks<span class="token operator">/</span>post<span class="token operator">-</span>receive
+</code></pre>
+<h4 id="在本地Hexo目录下修改"><a href="#在本地Hexo目录下修改" class="headerlink" title="在本地Hexo目录下修改"></a>在本地Hexo目录下修改</h4><pre class=" language-php"><code class="language-php"><span class="token comment" spellcheck="true">// _config.yml文件中的deploy后的repo改为：</span>
+deploy<span class="token punctuation">:</span>
+   type<span class="token punctuation">:</span> git
+   repo<span class="token punctuation">:</span> git@<span class="token number">121.4</span><span class="token punctuation">.</span><span class="token number">41.10</span><span class="token punctuation">:</span><span class="token operator">/</span>home<span class="token operator">/</span>git<span class="token operator">/</span>blog<span class="token punctuation">.</span>git
+   branch<span class="token punctuation">:</span> master
+</code></pre>
+<p>做完以上配置在执行hexo的一键三连就可以访问啦<span class="github-emoji"><span>😲</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f632.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>但是还有一步操作可以完善就是部署ssl证书（可以让网站访问更安全），没有证书的可以先<a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/ssl">申请证书</a></p>
+<h3 id="SSL证书部署"><a href="#SSL证书部署" class="headerlink" title="SSL证书部署"></a>SSL证书部署</h3><h4 id="下载-配置"><a href="#下载-配置" class="headerlink" title="下载/配置"></a>下载/配置</h4><p>注意： 要先开放服务器的443端口</p>
+<p>就是在证书申请下来以后有四个文件</p>
 <ul>
-<li>constructor()</li>
-<li><strong>componentWillMount()</strong></li>
-<li>render()</li>
-<li>componentDidMount</li>
+<li><p><code>cloud.tencent.com_bundle.crt</code> 证书文件（需要使用）</p>
+</li>
+<li><p><code>cloud.tencent.com_bundle.pem</code> 证书文件（可忽略该文件）</p>
+</li>
+<li><p><code>cloud.tencent.com.key</code> 私钥文件（需要使用）</p>
+</li>
+<li><p><code>cloud.tencent.com.csr</code> CSR 文件（不需要使用）</p>
+<p>就是在证书申请下来以后有四个文件需要将<code>cloud.tencent.com_bundle.crt</code>和<code>cloud.tencent.com.key</code>这两个文件复制到服务器的某个文件夹中这里推荐使用WinSCP</p>
+<pre class=" language-php"><code class="language-php">server <span class="token punctuation">{</span>
+    listen       <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name  www<span class="token punctuation">.</span>xx<span class="token punctuation">.</span>com<span class="token punctuation">;</span> <span class="token shell-comment comment">#你的域名</span>
+    rewrite <span class="token operator">^</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">)</span> https<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//$host$1 permanent;//将http 请求跳转https</span>
+   <span class="token punctuation">}</span>
+server <span class="token punctuation">{</span>
+   listen <span class="token number">443</span><span class="token punctuation">;</span>
+   server_name www<span class="token punctuation">.</span>xx<span class="token punctuation">.</span>com<span class="token punctuation">;</span> <span class="token shell-comment comment">#填写绑定证书的域名</span>
+   ssl on<span class="token punctuation">;</span>
+   ssl_certificate 1_www<span class="token punctuation">.</span>xx<span class="token punctuation">.</span>com_bundle<span class="token punctuation">.</span>crt<span class="token punctuation">;</span>
+   ssl_certificate_key 2_www<span class="token punctuation">.</span>xx<span class="token punctuation">.</span>com<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+   ssl_session_timeout 5m<span class="token punctuation">;</span>
+   ssl_protocols TLSv1 TLSv1<span class="token number">.1</span> TLSv1<span class="token number">.2</span><span class="token punctuation">;</span> <span class="token shell-comment comment">#按照这个协议配置</span>
+   ssl_ciphers <span class="token constant">ECDHE</span><span class="token operator">-</span><span class="token constant">RSA</span><span class="token operator">-</span><span class="token constant">AES128</span><span class="token operator">-</span><span class="token constant">GCM</span><span class="token operator">-</span><span class="token constant">SHA256</span><span class="token punctuation">:</span><span class="token constant">HIGH</span><span class="token punctuation">:</span><span class="token operator">!</span>aNULL<span class="token punctuation">:</span><span class="token operator">!</span><span class="token constant">MD5</span><span class="token punctuation">:</span><span class="token operator">!</span><span class="token constant">RC4</span><span class="token punctuation">:</span><span class="token operator">!</span><span class="token constant">DHE</span><span class="token punctuation">;</span><span class="token shell-comment comment">#按照这个套件配置</span>
+   ssl_prefer_server_ciphers on<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>接下来就可以重启nginx查看了<span class="github-emoji"><span>🤠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f920.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+</li>
 </ul>
-<p>2.更新阶段：由组件内部this.setState()或父组件render触发（还有ReactDOM.forceUpdate()强制更新，但是不常用）</p>
-<ul>
-<li>shouldComponentUpdate()  </li>
-<li><strong>componentWillUpdate()</strong></li>
-<li>render()</li>
-<li>componentDidUpdate()</li>
-</ul>
-<p>3.卸载阶段（由ReactDOM.unmountComponentAtNode()触发）</p>
-<ul>
-<li>componentWillUnmount()</li>
-</ul>
-<p>注意：还有一个<strong>componentWillReceiveProps()</strong> //传入一个new props才会被触发</p>
-<h3 id="2-新版本生命周期"><a href="#2-新版本生命周期" class="headerlink" title="2.新版本生命周期"></a>2.新版本生命周期</h3><p>1.初始化阶段   由ReactDOM.render（）触发—初次渲染</p>
-<ul>
-<li>constructor()</li>
-<li><strong>getDerivedStateFromProps(props,state)</strong>      //使用情况当state值完全和props对应的时候（接收两个参数props，state）</li>
-<li>render（）</li>
-<li>componentDidMount（）</li>
-</ul>
-<p>2.更新阶段：由组件内部this.setState()或父组件更新render触发</p>
-<ul>
-<li>**getDerivedStateFromProps(props,state) **      //使用的要当静态方法来用 <strong>前面加 static</strong></li>
-<li>shouldComponentUpdate()</li>
-<li><strong>getSnapshotBeforeUpdate()</strong>    //可以return 快照值    snapshotValue接收</li>
-<li>componentDidUpdate(refvProps,refvState,snapshotValue)</li>
-</ul>
-<p>3.卸载组件 : 由ReactDOM.unmountComponentAtNode()触发</p>
-<ul>
-<li>componentWillUnmount()</li>
-</ul>
-<h3 id="3-重要的钩子"><a href="#3-重要的钩子" class="headerlink" title="3.重要的钩子"></a>3.重要的钩子</h3><ul>
-<li>render()    //初始化渲染或更新渲染用</li>
-<li>componentDidMount()   // 开启监听发送Ajax请求，订阅消息</li>
-<li>componentWillUnmount()   // 做一些收尾工作，清除定时器</li>
-</ul>
-<h3 id="4-18版本中即将废弃的钩子"><a href="#4-18版本中即将废弃的钩子" class="headerlink" title="4.18版本中即将废弃的钩子"></a>4.18版本中即将废弃的钩子</h3><ul>
-<li>componentWillMount()</li>
-<li>componentWillReceiveProps()</li>
-<li>componentWillUpdate()</li>
-</ul>
-<p>注意：在新版本使用要加UNSAFE_前缀才能使用（之后可能就废弃啦）不然会报警告</p>
-<h3 id="5-虚拟DOM与DOM-diffing（diff）"><a href="#5-虚拟DOM与DOM-diffing（diff）" class="headerlink" title="5.虚拟DOM与DOM diffing（diff）"></a>5.虚拟DOM与DOM diffing（diff）</h3><ul>
-<li><strong>虚拟DOM中key的作用：</strong></li>
-</ul>
-<ol>
-<li>简单地说：key是虚拟DOM对象的标识，在更新显示时key起着及其重要的作用。</li>
-<li>详细的说：“当状态中的数据发生变化时，React会根据【新数据】生成【新得虚拟DOM】”</li>
-</ol>
-<p>​                           随后React进行【新的虚拟DOM】与【旧的虚拟DOM】做diff比较，比较规则如下：</p>
-<p>​                        a.旧虚拟DOM中找到了与新虚拟DOM相同的key              </p>
-<p>​                               （1）若虚拟DOM内容没有改变，直接使用之前的真实DOM</p>
-<p>​                               （2）若虚拟DOM中内容变了，则生成新得真实DOM，随后替换掉页面中之前的真实dom</p>
-<p>​                        b.旧的虚拟DOM中未找到与新得虚拟DOM相同的key</p>
-<p>​                               （1）根据新得数据创建新得真实DOM，随后渲染到页面上  </p>
-<ul>
-<li><strong>用index作为key可能会引发的问题</strong></li>
-</ul>
-<ol>
-<li> 若对数组进行：逆序添加、逆序删除等破坏顺序的操作：会产生没有必要的真实DOM更新 ==》界面效果没有问题，但是效率太低</li>
-<li> 如果结构中还存在输入类的DOM ： 会产生错误的DOM更新 ==》界面有问题</li>
-<li>注意：如果不存在对数据的逆序添加、删除等操作的时候 ==》 仅仅用于渲染列表用于展示，使用index作为key是没有问题的</li>
-</ol>
-<ul>
-<li>开发中何如选择key？</li>
-</ul>
-<ol>
-<li>最好还是使用每一条数据的唯一标识作为key</li>
-<li>如果确定只是简单的展示数据，用index也是可以的</li>
-</ol>
-<p>​                 </p>
 
                 
             </div>
@@ -520,7 +546,7 @@ render()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hdajun.github.io/2022/01/24/react-day-three-tidying-up/">https://hdajun.github.io/2022/01/24/react-day-three-tidying-up/</a>
+                    <a href="https://hdajun.github.io/2023/03/06/hexo-bo-ke-bu-shu-teng-xun-yun-guo-cheng-quan-ji-lu/">https://hdajun.github.io/2023/03/06/hexo-bo-ke-bu-shu-teng-xun-yun-guo-cheng-quan-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,12 +584,12 @@ render()
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/React/">
-                                    <span class="chip bg-color">React</span>
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
-                                <a href="/tags/learning/">
-                                    <span class="chip bg-color">learning</span>
+                                <a href="/tags/centos/">
+                                    <span class="chip bg-color">centos</span>
                                 </a>
                             
                         </div>
@@ -608,7 +634,7 @@ render()
         repo: 'Hdajun.github.io',
         owner: 'Hdajun',
         admin: "Hdajun",
-        id: '2022-01-24T22-39-52',
+        id: '2023-03-06T23-37-54',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -638,17 +664,18 @@ render()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/24/react-day-two-tidying-up/">
+                <a href="/2023/03/06/hexo-bo-ke-bu-shu-teng-xun-yun-guo-cheng-quan-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.png" class="responsive-img" alt="Hello React day2">
+                        <img src="/medias/featureimages/23.png" class="responsive-img" alt="Hexo博客部署腾讯云过程全记录">
                         
-                        <span class="card-title">Hello React day2</span>
+                        <span class="card-title">Hexo博客部署腾讯云过程全记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -658,30 +685,31 @@ render()
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/react/" class="post-category">
-                                    react
+                            <a href="/categories/common/" class="post-category">
+                                    common
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
-                    <a href="/tags/learning/">
-                        <span class="chip bg-color">learning</span>
+                    <a href="/tags/centos/">
+                        <span class="chip bg-color">centos</span>
                     </a>
                     
                 </div>
@@ -695,13 +723,13 @@ render()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/24/react-day-four-tidying-up/">
+                <a href="/2023/02/21/nodejs-xiang-guan-wen-ti-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="Hello React day4">
+                        <img src="/medias/featureimages/8.png" class="responsive-img" alt="Nodejs_相关问题记录">
                         
-                        <span class="card-title">Hello React day4</span>
+                        <span class="card-title">Nodejs_相关问题记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,14 +740,14 @@ render()
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/react/" class="post-category">
-                                    react
+                            <a href="/categories/node/" class="post-category">
+                                    node
                                 </a>
                             
                             
@@ -729,12 +757,12 @@ render()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
                     </a>
                     
-                    <a href="/tags/learning/">
-                        <span class="chip bg-color">learning</span>
+                    <a href="/tags/difficulty/">
+                        <span class="chip bg-color">difficulty</span>
                     </a>
                     
                 </div>
